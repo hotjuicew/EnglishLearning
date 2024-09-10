@@ -6,8 +6,9 @@
 
 **02 题目问啥我爱啥**
 **If you have the chance to go to the outer space, will you go or not?**
-<span class="cloze-span" data-cloze-hint="如果我有机会去外太空，我一定会去，因为我热爱天文学，我确实想成为一名天文学家将来。">Well, if I have the chance to go to outer space, I would definitely go because I love astronomy and I actually want to be an astronomer in the future.</span> <span class="cloze-span" data-cloze-hint="如果我能做到这一点，我将能够体验到许多令人兴奋的事情，比如一个没有重力的世界">If I could do this, I would be able to experience a lot of exciting things, like a world without gravity</span>, and <span class="cloze-span" data-cloze-hint="我会看到一些美丽的星云，特别是蟹状星云，这是我最喜欢的。">I would get to see some beautiful nebulae, especially the Crab Nebula, which is my favorite.</span> <span class="cloze-span" data-cloze-hint="而且，我觉得如果我足够幸运，我甚至可能会遇到一些外星人，这将是非常棒的。">Also, I think if I'm lucky enough, I might even meet some aliens, which would be fantastic.</span>
+<span class="cloze-span" data-cloze-hint="如果我有机会去外太空，我一定会去，因为我热爱天文学，我确实想成为一名天文学家将来。">Well, if I have the chance to go to outer space, I would definitely go because I love astronomy and I actually want to be an astronomer in the future.</span> <span class="cloze-span" data-cloze-hint="如果我能做到这一点，我将能够体验到许多令人兴奋的事情，比如一个没有重力的世界">If I could do this, I would be able to experience a lot of exciting things, like a world without gravity</span>, and <span class="cloze-span" data-cloze-hint="我会看到一些美丽的星云，特别是蟹状星云，这是我最喜欢的。">I would get to see some beautiful nebula, especially the Crab Nebula, which is my favorite.</span> <span class="cloze-span" data-cloze-hint="而且，我觉得如果我足够幸运，我甚至可能会遇到一些外星人，这将是非常棒的。">Also, I think if I'm lucky enough, I might even meet some aliens, which would be fantastic.</span>
 
+<span class="cloze-span">I would definitely go </span>我肯定会去
 在这句话中使用 "could" 和 "would" 而不是 "can" 和 "will" 是因为这是一个与现实情况相反的假设，属于虚拟语气
 **03 参加比赛得奖棒**
 **Talk about a positive even and the result.**
