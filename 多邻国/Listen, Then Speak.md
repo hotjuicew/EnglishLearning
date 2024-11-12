@@ -18,54 +18,142 @@ Mr. Wang's ability to explain concepts clearly and patiently helped me regain my
 
 Everyday life is full of uncertainties, such as sudden health issues, job changes, or unexpected expenses. To prepare, people can build an emergency fund to cover unforeseen costs, ensuring financial stability. Maintaining a healthy lifestyle and regular check-ups can help prevent and manage health-related surprises. Additionally, staying adaptable and continuously learning new skills can prepare individuals for changes in the job market. It's also helpful to have a flexible mindset and a plan B for important goals. By being proactive and resilient, people can better handle the unexpected and reduce the stress that comes with uncertainties.
 
-**5.Talk about a tough project where you had to combine different subjects.**
+5.Talk about a tough project where you had to combine different subjects.
 
-I worked on a tough project that involved combining computer science and manufacturing knowledge. The project required developing a system to process real-time data from manufacturing devices, which meant I had to understand both coding and the technical details of the machines. I had to learn about the specific data these devices generated and how to write efficient code to process it quickly. This project pushed me to blend my coding skills with my understanding of the manufacturing process, ensuring the system was both accurate and fast. It was challenging, but it taught me the importance of interdisciplinary knowledge and how integrating different subjects can lead to innovative solutions.
+I worked on a tough project that **involved** combining computer science and manufacturing knowledge. The project required developing a system to process real-time data from manufacturing devices, which meant I had to understand both coding and the **technical details** of the machines. I had to learn about the specific data these devices generated and how to write efficient code to process it quickly. This project pushed me to blend my coding skills with my understanding of the manufacturing process, ensuring the system was both accurate and fast. It was challenging, but it taught me the importance of interdisciplinary knowledge and how integrating different subjects can lead to innovative solutions.
 
-**6.Describe the most impactful book you've ever read. How did it change you?** The most impactful book I've ever read is _Gone with the Wind_. It changed me by showing the power of resilience and adaptability in the face of adversity. The protagonist, Scarlett O'Hara, faces numerous challenges during the American Civil War and its aftermath, yet she never gives up. Her determination and resourcefulness inspired me to be more resilient in my own life, especially during difficult times. The book also deepened my understanding of the complexities of human nature and the impact of historical events on individual lives. It taught me the importance of perseverance and adaptability, lessons that I carry with me in both personal and professional situations. 
+6.Describe the most impactful book you've ever read. How did it change you? 
+The most impactful book I've ever read is _Gone with the Wind_. It changed me by showing the power of resilience and adaptability in the face of adversity. The protagonist, Scarlett O'Hara, faces numerous challenges during the American Civil War and its aftermath, yet she never gives up. Her determination and resourcefulness inspired me to be more resilient in my own life, especially during difficult times. The book also deepened my understanding of the complexities of human nature and the impact of historical events on individual lives. It taught me the importance of perseverance and adaptability, lessons that I carry with me in both personal and professional situations. 
 
-**7.How have recent technological development changed the way we communicate?** Recent technological developments have <span class="cloze-span">dramatically</span> changed the way we communicate. <span class="cloze-span" data-cloze-hint="即时通讯、社交媒体、视频通话">Instant messaging, social media, and video calls</span> <span class="cloze-span" data-cloze-hint="让我们可以与他人联系立即，不管距离有多远">allow us to connect with others instantly, regardless of distance</span>. We can now share information, photos, and videos in real-time, <span class="cloze-span" data-cloze-hint="使交流更加动态和交互性">making communication more dynamic and interactive</span>. These technologies have also <span class="cloze-span">made it easier</span> to maintain relationships, whether personal or professional, b<span class="cloze-span" data-cloze-hint="通过频繁和方便的联系。">y enabling frequent and convenient contact</span>. However, they’ve also reduced face-to-face interactions, which can impact the depth of our connections. Overall, technology has made communication faster, more efficient, and more accessible, transforming how we stay in touch with others.
+7.How have recent technological development changed the way we communicate?
+Recent technological developments have dramatically changed the way we communicate. Instant messaging, social media, and video calls allow us to connect with others instantly, regardless of distance. We can now share information, photos, and videos in real-time, making communication more dynamic and interactive. These technologies have also made it easier to maintain relationships, whether personal or professional, by enabling frequent and convenient contact. However, they’ve also reduced face-to-face interactions, which can impact the depth of our connections. Overall, technology has made communication faster, more efficient, and more accessible, transforming how we stay in touch with others.
 
-**8.Talk about a key skill that helps with career growth. What benefits does it offer?**
+8.Talk about a key skill that helps with career growth. What benefits does it offer?
+有效沟通
+许多
+和同事合作
+必要的，至关重要的
+发展人际关系n
+建立宝贵的人际关系
+带来新的机遇
+提高你的职业声誉
+提高晋升机会
+解决冲突
+保证项目平稳运行
+对xxx至关重要的
+职业发展和成功
+A key skill that helps with career growth is **effective communication**. It offers **numerous** benefits, such as the ability to clearly convey ideas and **collaborate with colleagues**, which is **essential** in any workplace. Good communication skills also help **in networking**, allowing you to **build valuable relationships** that can **lead to new opportunities**. Additionally, being able to express yourself well in meetings or presentations can **enhance your professional reputation** and **increase your chances of promotion**. Effective communication also helps in **resolving conflicts** and **ensuring that projects run smoothly**. Overall, this skill **is crucial for** **career advancement and success** in any field.
 
-<span class="cloze-span" data-cloze-hint="一个关键技能有助于职业发展的是有效的沟通">A key skill that helps with career growth is effective communication. </span><span class="cloze-span" data-cloze-hint="它提供了许多好处">It offers numerous benefits</span>, <span class="cloze-span" data-cloze-hint="比如清晰表达思想的能力">such as the ability to clearly convey ideas</span> and <span class="cloze-span" data-cloze-hint="与同事合作">collaborate with colleagues</span>, <span class="cloze-span" data-cloze-hint="这在任何工作场所都是必不可少的">which is essential in any workplace</span>. Good communication skills also help <span class="cloze-span" data-cloze-hint="社交">in networking</span>, allowing you to <span class="cloze-span" data-cloze-hint="建立可以带来新机遇的有价值的关系">build valuable relationships that can lead to new opportunities</span>. <span class="cloze-span">Additionally</span>, <span class="cloze-span" data-cloze-hint="能够在会议或演讲中很好地表达自己">being able to express yourself well in meetings or presentations</span> <span class="cloze-span" data-cloze-hint="可以提高你的专业声誉，增加你的晋升机会。">can enhance your professional reputation and increase your chances of promotion</span>. Effective communication also<span class="cloze-span"> helps in</span> <span class="cloze-span" data-cloze-hint="解决冲突">resolving conflicts</span> and <span class="cloze-span" data-cloze-hint="确保项目运行平稳">ensuring that projects run smoothly</span>. <span class="cloze-span">Overall</span>,<span class="cloze-span" data-cloze-hint="这项技能是至关重要的 对于"> this skill is crucial for</span> <span class="cloze-span" data-cloze-hint="职业发展和成功在任何领域">career advancement and success in any field.</span>
+9.How do some hobbies help you grow as a person over time?
+有助于
+以各种方式
+体能耐力
+总体健康和精力水平
+创造性的和积极的
+坚持n
+实现目标的承诺
+适应力
+提供探索新地方的机会
+欣赏大自然
+拓宽某人的视野
+提升心理健康
+促进平衡和增长为导向的生活方式
+Cycling can **contribute to** personal growth **in various ways**. First, it builds **physical endurance**, which improves **overall health and energy levels**, allowing a person to be more **productive and active** in daily life. **Additionally**, cycling requires discipline and **persistence**, especially when facing long distances or challenging routes. **This commitment to reaching goals** helps develop **resilience**, which can be valuable in other aspects of life, like work or studies. Cycling also **provides opportunities to explore new places**, meet new people, and **appreciate nature**, all of which can **broaden one's perspective** and **enhance mental well-being**. Overall, cycling **offers** both physical and emotional benefits, **promoting a balanced and growth-oriented lifestyle**.
 
-**9.How do some hobbies help you grow as a person over time?**
+10.How can someone overcome procrastination? What methods can they use?
+以……开始
+感觉不堪重负
+设定明确的、可实现的目标
+区分任务的优先次序
+处理
+消除分心的事物
+关闭通知
+创造专用的工作区
+也起着至关重要的作用
+Overcoming procrastination can be challenging, but there are effective methods to help. **Start by** breaking tasks into smaller, manageable steps to avoid **feeling overwhelmed**. **Set clear, achievable goals** with specific deadlines to stay focused. Use techniques. **Prioritize tasks** by creating a to-do list and **tackling** the most important ones first. **Additionally**, **eliminate distractions**, such as **turning off notifications** or **creating a dedicated workspace**. Building a routine and developing self-discipline through consistent habits **also play a crucial role**. By using these strategies, you can improve your time management and reduce **procrastination**.
 
-Reading has been a hobby that has helped me grow as a person over time. <span class="cloze-span" data-cloze-hint="它拓宽了我的观点">It broadens my perspective</span> <span class="cloze-span" data-cloze-hint="通过让我暴露在不同的文化、思想和经历">by exposing me to different cultures, ideas, and experiences. </span>Through books, <span class="cloze-span" data-cloze-hint="我学到了各种观点，并建立同理心对于其他人。">I’ve learned about various viewpoints and developed empathy towards others. </span><span class="cloze-span" data-cloze-hint="阅读还提高我的批判性思维和解决问题的能力">Reading also enhances my critical thinking and problem-solving skills</span>, <span class="cloze-span" data-cloze-hint="因为它经常挑战我去分析和反思复杂的情况。">as it often challenges me to analyze and reflect on complex situations.</span> Additionally, it has improved my language and communication abilities, <span class="cloze-span" data-cloze-hint="帮助我表达我的想法更清楚地">helping me articulate my thoughts more clearly</span>. <span class="cloze-span">Overall</span>, <span class="cloze-span" data-cloze-hint="阅读一直是个人成长的源泉">reading has been a source of personal growth</span>, <span class="cloze-span" data-cloze-hint="让我更有知识，更开明，更能言善辩。">making me more knowledgeable, open-minded, and articulate</span>.
+11.Which famous person would you invite to a dinner party? What is the person famous for?
+惊人的才华
+跨越
+多种类型
+著名
+有见地和个性的歌词
+因……而被钦佩
+行动主义和慈善事业
+深入了解
+有魅力的性格
+早就一场生动而鼓舞人心的谈话
+I’d invite Taylor Swift to a dinner party. She’s famous for her **incredible talent** as a singer-songwriter and her ability to connect with audiences through her music. Taylor’s career **spans across** **multiple genres**, from country to pop, and she’s **known for** her **insightful and personal lyrics**. Beyond her music, she’s also **admired for** her **activism and philanthropy**. I’d love to hear her stories and experiences, and **gain insight into** her creative process. **Plus**, her positive influence and **engaging personality** would **make for a lively and inspiring conversation** at the dinner table.
 
-**10.How can someone overcome procrastination? What methods can they use?**
+12.Which famous person has had the biggest impact on what you believe, and how?
 
-<span class="cloze-span" data-cloze-hint="克服拖延是一项挑战">Overcoming procrastination can be challenging</span>, <span class="cloze-span" data-cloze-hint="但是有有效的方法来帮助">but there are effective methods to help</span>.<span class="cloze-span" data-cloze-hint="首先，将任务分解成更小的、可管理的步骤"> Start by breaking tasks into smaller, manageable steps</span> <span class="cloze-span" data-cloze-hint="以免感到不知所措。">to avoid feeling overwhelmed</span>. <span class="cloze-span" data-cloze-hint="设定明确的、可实现的目标，并设定具体的截止日期，以保持专注">Set clear, achievable goals with specific deadlines to stay focused</span>. Use techniques. <span class="cloze-span" data-cloze-hint="通过创建待办事项列表来确定任务的优先级">Prioritize tasks by creating a to-do list</span> and<span class="cloze-span" data-cloze-hint="先解决最重要的问题"> tackling the most important ones first</span>. <span class="cloze-span">Additionally</span>, <span class="cloze-span" data-cloze-hint="消除分心的事物">eliminate distractions</span>, <span class="cloze-span">such as</span> <span class="cloze-span" data-cloze-hint="例如关闭通知或创建专用工作区">turning off notifications or creating a dedicated workspace</span>. <span class="cloze-span" data-cloze-hint="建立常规和发展自律">Building a routine and developing self-discipline</span> <span class="cloze-span" data-cloze-hint="通过一贯的习惯">through consistent habits</span> also <span class="cloze-span">play a crucial role</span>. By <span class="cloze-span">using these strategies</span>, <span class="cloze-span" data-cloze-hint="你可以改善你的时间管理，减少拖延">you can improve your time management and reduce procrastinatio</span>n.
+Taylor Swift has had the biggest impact on what I believe, particularly in the importance of self-expression and resilience. Her journey in the music industry, from battling public scrutiny to reclaiming her narrative, has taught me the value of standing up for oneself. Swift’s music encourages authenticity, showing that it's okay to be vulnerable and speak your truth. Her advocacy for artists' rights and her philanthropic efforts also inspire me to believe in using one's platform for good. Overall, her strength and creativity have shaped my beliefs about perseverance and the power of staying true to oneself.
 
-**11.Which famous person would you invite to a dinner party? What is the person famous for?**
+13.Talk about ways that may deal with the worldwide decrease in biodiversity.
+采取几项关键行动
+促进可持续的实践
+保护生态系统
+提高对……的意识
+参与保护工作
+朝着……努力
 
-I’d invite Taylor Swift to a dinner party. <span class="cloze-span" data-cloze-hint="她作为一个创作歌手以惊人的天赋而闻名">She’s famous for her incredible talent as a singer-songwriter</span> and <span class="cloze-span" data-cloze-hint="她通过音乐与观众交流的能力">her ability to connect with audiences through her music</span>. Taylor’s career <span class="cloze-span" data-cloze-hint="跨越多个流派">spans across multiple genres</span>,<span class="cloze-span"> from country to pop</span>, and <span class="cloze-span" data-cloze-hint="她以富有洞察力和个人风格的歌词而闻名">she’s known for her insightful and personal lyrics</span>. <span class="cloze-span">Beyond</span> her music, <span class="cloze-span" data-cloze-hint="她的行动主义和慈善事业也令人钦佩">she’s also admired for her activism and philanthropy</span>. I’d love to hear her stories and experiences, and <span class="cloze-span" data-cloze-hint="深入了解她的创作过程">gain insight into her creative process</span>. Plus, <span class="cloze-span" data-cloze-hint="her positive influence and engaging personality">her positive influence and engaging personality</span> would <span class="cloze-span">make for</span> <span class="cloze-span" data-cloze-hint="生动而鼓舞人心的谈话">a lively and inspiring conversation</span> at the dinner table.
+To address the worldwide decrease in biodiversity, we can **take several key actions**. First, we should support and expand protected areas like national parks to safeguard habitats from development and exploitation. Second, **promoting sustainable practices** in agriculture and forestry helps minimize environmental impact and **preserves ecosystems**. Third, **raising awareness about** the importance of biodiversity can encourage more people to **participate in conservation efforts**. Fourth, investing in research and restoration projects can help recover endangered species and habitats. Lastly, reducing pollution and climate change through cleaner energy sources and reducing waste is crucial. By combining these strategies, we can **work towards** reversing the decline in biodiversity and preserving our planet’s natural heritage.
 
-**12.Which famous person has had the biggest impact on what you believe, and how?**
+14.Should universities be free for everyone? What are the pros and cons?
+有利也有弊
+从积极的一面来看
+不管经济背景
+促进平等
+发挥潜力
+经济负担
+实施这样一个系统的高成本
+增加的税收
+解决根本问题
+就业市场一致性
+平衡这些因素是至关重要的
+Making universities free for everyone **has both pros and cons**. **On the positive side**, it would make higher education accessible to all, **regardless of financial background**, **promoting equality** and enabling more people to **achieve their potential**. It could also reduce student debt, allowing graduates to start their careers without **financial burdens**. However, the cons include **the high cost of implementing such a system**, which could lead to **increased taxes** or reallocation of funds from other areas. Additionally, free tuition might not **address underlying issues** like the quality of education or **job market alignment**. **Balancing these factors is crucial to** determine  the best approach to higher education accessibility.
 
-Taylor Swift has had the biggest impact on what I believe, particularly in the importance of <span class="cloze-span" data-cloze-hint="自我表达和适应能力">self-expression and resilience</span>. Her journey<span class="cloze-span"> in the music industry</span>, from <span class="cloze-span">battling public scrutiny</span> to <span class="cloze-span">reclaiming her narrative</span>, has taught me the value of <span class="cloze-span">standing up for oneself</span>. Swift’s music encourages <span class="cloze-span" data-cloze-hint="真实性">authenticity</span>, showing that it's okay to be <span class="cloze-span">vulnerable</span> and<span class="cloze-span"> speak your truth</span>. Her advocacy for artists' rights and her<span class="cloze-span" data-cloze-hint="慈善方面的努力"> philanthropic efforts</span> also inspire me to believe in <span class="cloze-span" data-cloze-hint="用自己的平台做好事">using one's platform for good</span>. <span class="cloze-span">Overall</span>, her<span class="cloze-span" data-cloze-hint="力量和创造力"> strength and creativity </span>have <span class="cloze-span">shaped</span> my beliefs about <span class="cloze-span" data-cloze-hint="毅力">perseverance</span> and the power of <span class="cloze-span">staying true to oneself</span>.
+15.How does regular activity from childhood benefit health in the long term?
+为... 打下坚实的基础
+身体健康
+肌肉力量
+骨密度
+不容易患上慢性疾病
+肥胖
+糖尿病
+心脏病
+促进健康的习惯
+支持心理健康
+提升心情
+让他们终身受益
+Regular physical activity from childhood has significant long-term health benefits. It helps **build a strong foundation for** **physical fitness**, improving heart health, **muscle strength**, and **bone density**. Kids who stay active **are less likely to develop chronic conditions** like **obesity**, **diabetes**, or **heart disease** later in life. Additionally, regular exercise **promotes healthy habits** and a positive attitude towards fitness, which can lead to a more active lifestyle as adults. It also **supports mental health** by reducing stress and **boosting mood**. By establishing these habits early, children are more likely to **maintain them throughout their lives**, contributing to overall well-being and a healthier future.
 
-**13.Talk about ways that may deal with the worldwide decrease in biodiversity.**
+16.What are the benefits and drawbacks of working from home compared to working in an office?
+有几个好处
+提高灵活性
+个性化的工作区
+导致更好的工作与生活的平衡
+孤立感
+将工作与个人生活分开的困难
+最佳选择取决于个人喜好和工作要求
+提供更多的社社交互动、协作和即时反馈的机会
+Working from home **offers several benefits**, such as **increased flexibility** and the ability to create a **personalized workspace**. It eliminates commuting time, which can **lead to a better work-life balance** and reduced stress. However, it can also lead to **feelings of isolation** and **difficulty separating work from personal life**. On the other hand, working in an office **provides more opportunities for social interaction, collaboration, and immediate feedback**. It can also create a clearer boundary between work and home life. Yet, it often involves commuting and less flexibility. Both setups have their pros and cons, and **the best choice depends on individual preferences and job requirements**.
 
-To <span class="cloze-span">address</span> the worldwide decrease in biodiversity, <span class="cloze-span" data-cloze-hint="采取几项关键行动">we can take several key actions</span>. <span class="cloze-span">First</span>, we should <span class="cloze-span" data-cloze-hint="支持和扩大保护区">support and expand protected areas</span> like national parks to <span class="cloze-span" data-cloze-hint="保护生境免受开发和利用。">safeguard habitats from development and exploitatio</span>n. Second, <span class="cloze-span" data-cloze-hint="促进农业和林业的可持续做法">promoting sustainable practices in agriculture and forestry</span> helps <span class="cloze-span" data-cloze-hint="减少对环境的影响并保护生态系统">minimize environmental impact and preserves ecosystems</span>. Third, <span class="cloze-span" data-cloze-hint="提高意识">raising awareness</span> <span class="cloze-span">about</span> the importance of biodiversity can <span class="cloze-span" data-cloze-hint="鼓励更多人参与保护工作">encourage more people to participate in conservation efforts</span>. Fourth, <span class="cloze-span" data-cloze-hint="投资研究和恢复项目可以帮助恢复濒危物种和栖息地">investing in research and restoration projects can help recover endangered species and habitats</span>. Lastly,<span class="cloze-span" data-cloze-hint="减少污染和气候变化"> reducing pollution and climate change</span> through cleaner <span class="cloze-span" data-cloze-hint="清洁能源和减少浪费">energy sources and reducing waste</span> is crucial. <span class="cloze-span" data-cloze-hint="通过结合这些策略">By combining these strategies</span>, we can <span class="cloze-span" data-cloze-hint="致力于">work towards</span> <span class="cloze-span" data-cloze-hint="扭转生物多样性下降的趋势">reversing the decline in biodiversity</span> and <span class="cloze-span" data-cloze-hint="保护我们星球的自然遗产">preserving our planet’s natural heritage</span>.
+17.What historical event do you wish you could have seen? What makes it interesting to you?
+主要发生在18世纪的欧洲
+重视理性、科学和个人权利
+挑战传统信仰
+宣扬自由和进步的思想
+吸引人的
+为……打下基础
+开辟一条新的道路
+强大的思想是如何真正改变世界的
+If I could witness a historical event, I would choose the Age of Enlightenment, which **took place mainly in the 18th century in Europe**. This period is interesting to me because it **marked a time when** people began to **value reason, science, and individual rights**. Philosophers **challenged traditional beliefs** and **promoted ideas about freedom and progress**. I find it **fascinating** because their ideas **laid the foundations for** modern democracies and influenced revolutions like the American and French Revolutions. Watching these thinkers debate and question authority would be **inspiring**, especially knowing that they were **shaping a new path** for society. This period showed **how powerful ideas can truly change the world**.
 
-**14.Should universities be free for everyone? What are the pros and cons?**
-
-Making universities free for everyone <span class="cloze-span">has both pros and cons</span>. <span class="cloze-span">On the positive side</span>, it would <span class="cloze-span" data-cloze-hint="使所有人都能接受高等教育">make higher education accessible to all</span>, <span class="cloze-span" data-cloze-hint="不论经济背景如何">regardless of financial background</span>, <span class="cloze-span" data-cloze-hint="促进平等">promoting equality</span> and <span class="cloze-span" data-cloze-hint="让更多的人发挥他们的潜能">enabling more people to achieve their potential</span>. It could also <span class="cloze-span" data-cloze-hint="减少学生债务">reduce student debt</span>, <span class="cloze-span" data-cloze-hint="允许毕业生在没有经济负担的情况下开始他们的职业生涯">allowing graduates to start their careers without financial burdens</span>. However, the cons include <span class="cloze-span" data-cloze-hint="实施这样一个系统的高成本">the high cost of implementing such a system</span>, which could<span class="cloze-span"> lead to</span> <span class="cloze-span" data-cloze-hint="增加税收或重新分配其他领域的资金">increased taxes or reallocation of funds from other areas.</span> <span class="cloze-span">Additionally</span>, <span class="cloze-span" data-cloze-hint="免学费">free tuition</span> might not <span class="cloze-span" data-cloze-hint="解决根本问题">address underlying issues</span> like <span class="cloze-span" data-cloze-hint="比如教育质量或就业市场的一致性">the quality of education or job market alignment</span>. <span class="cloze-span" data-cloze-hint="平衡这些因素">Balancing these factors</span> <span class="cloze-span">is crucial to </span>determine <span class="cloze-span" data-cloze-hint="获得高等教育的最佳途径。">the best approach to higher education accessibility.
-</span>
-**15.How does regular activity from childhood benefit health in the long term?**
-
-Regular physical activity from childhood <span class="cloze-span">has significant long-term health benefits</span>.<span class="cloze-span" data-cloze-hint="它有助于为身体健康打下坚实的基础"> It helps build a strong foundation for physical fitness</span>,<span class="cloze-span" data-cloze-hint="改善心脏健康、肌肉力量和骨密度"> improving heart health, muscle strength, and bone density</span>. Kids <span class="cloze-span">who stay active</span> <span class="cloze-span">are less likely to</span> <span class="cloze-span" data-cloze-hint="在以后的生活中患上肥胖症、糖尿病或心脏病等慢性疾病">develop chronic conditions like obesity, diabetes, or heart disease later in life.</span> <span class="cloze-span">Additionally</span>, regular exercise <span class="cloze-span" data-cloze-hint="促进健康的生活习惯和积极的健身态度">promotes healthy habits and a positive attitude towards fitness</span>, which can lead to a <span class="cloze-span">more active lifestyle</span> as adults. It also <span class="cloze-span">supports mental health</span> by <span class="cloze-span">reducing stress</span> and <span class="cloze-span" data-cloze-hint="提升心情">boosting mood</span>. By <span class="cloze-span" data-cloze-hint="建立这些习惯">establishing these habits</span> early, children <span class="cloze-span">are more likely to</span> maintain them <span class="cloze-span">throughout their lives</span>, <span class="cloze-span" data-cloze-hint="促进整体福祉和更健康的未来">contributing to overall well-being and a healthier future.</span>
-
-**16.What are the benefits and drawbacks of working from home compared to working in an office?**
-
-Working from home offers several benefits, <span class="cloze-span">such as</span> increased flexibility and the ability to create a personalized workspace. It eliminates commuting time, which can <span class="cloze-span" data-cloze-hint="带来更好的工作生活平衡">lead to a better work-life balance</span> and <span class="cloze-span">reduced stress</span>. However, it can also lead to feelings of isolation and difficulty <span class="cloze-span" data-cloze-hint="将工作和生活分离">separating work from personal life</span>. <span class="cloze-span">On the other hand</span>, working in an office provides more opportunities for <span class="cloze-span" data-cloze-hint="社交互动">social interaction</span>, <span class="cloze-span" data-cloze-hint="合作">collaboration</span>, and<span class="cloze-span" data-cloze-hint="即时反馈"> immediate feedback</span>. It can also <span class="cloze-span" data-cloze-hint="建立一个清楚的界限">create a clearer boundary</span> <span class="cloze-span">between work and home life</span>. <span class="cloze-span">Yet</span>, <span class="cloze-span" data-cloze-hint="它往往涉及通勤和较少的灵活性">it often involves commuting and less flexibility</span>. <span class="cloze-span" data-cloze-hint="两种安排都有他们的优点和缺点">Both setups have their pros and cons</span>, and <span class="cloze-span" data-cloze-hint="最好的选择取决于个人偏好和工作需求">the best choice depends on individual preferences and job requirements.</span>
-
-**17.What historical event do you wish you could have seen? What makes it interesting to you?**
-
-If I could witness one historical event, it would be the moment<span class="cloze-span" data-cloze-hint="一个苹果掉到牛顿的头上"> when an apple  fell on Newton's head</span>, <span class="cloze-span">inspiring his theory of gravity</span>. While the story is likely <span class="cloze-span" data-cloze-hint="更像是象征而非事实">more symbolic than factual</span>, it <span class="cloze-span" data-cloze-hint="标志着转折点">marks a turning point</span> in <span class="cloze-span">human understanding of the natural world</span>. Newton’s <span class="cloze-span" data-cloze-hint="洞察力">insight</span> <span class="cloze-span" data-cloze-hint="奠定基础">laid the foundation</span> for <span class="cloze-span" data-cloze-hint="经典力学">classical mechanics</span>, <span class="cloze-span" data-cloze-hint="革命性的科学">revolutionizing science</span> and <span class="cloze-span" data-cloze-hint="我们对宇宙的感知">our perception of the universe</span>. The simplicity of a falling apple sparking a <span class="cloze-span" data-cloze-hint="开创性的">groundbreaking</span> idea<span class="cloze-span"> fascinates me</span>. It’s a <span class="cloze-span" data-cloze-hint="强烈的提醒">powerful reminder</span> that even <span class="cloze-span">everyday occurrences</span> can lead to <span class="cloze-span">extraordinary discoveries.</span>
-
-**18.How could the wide use of digital money change the global economy?**
-
-The **<span class="cloze-span">widespread</span>** use of digital money could **<span class="cloze-span">significantly</span>** impact the global economy <span class="cloze-span" data-cloze-hint="通过让交易更快更有效">by making transactions **faster, more efficient**</span>, and <span class="cloze-span" data-cloze-hint="让更多的人可以使用">**accessible to a broader population**</span>. It could reduce the need for physical cash, **lower transaction costs**, and <span class="cloze-span" data-cloze-hint="让跨国支付更简单">make cross-border payments simpler</span>. However, it might also lead to challenges like increased <span class="cloze-span">cybersecurity risks</span> . <span class="cloze-span">Additionally</span>, digital currencies could <span class="cloze-span" data-cloze-hint="干扰传统银行系统">disrupt traditional banking systems</span>, requiring them to adapt to new technologies and changing consumer expectations. <span class="cloze-span">Overall</span>, the shift to digital money could <span class="cloze-span" data-cloze-hint="带来更互联有效的全球经济">lead to a more interconnected and efficient global economy</span>, but it would also require <span class="cloze-span" data-cloze-hint="对相关风险的监管">careful management of the associated risks.</span>
+18.How could the wide use of digital money change the global economy?
+更快，更有效率
+减少交易费用
+跨境支付
+增加的网络安全风险
+要求谨慎管理相关风险
+The widespread use of digital money could significantly impact the global economy **by** making transactions **faster, more efficient**, and **accessible to a broader population**. It could reduce the need for physical cash, **lower transaction costs**, and make **cross-border payments** simpler. However, it might also lead to challenges like **increased cybersecurity risks** . Additionally, digital currencies could disrupt traditional banking systems, requiring them to adapt to new technologies and changing consumer expectations. Overall, the shift to digital money could lead to a more interconnected and efficient global economy, but it would also **require careful management of the associated risks**.
