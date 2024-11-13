@@ -126,7 +126,7 @@ Making universities free for everyone **has both pros and cons**. **On the posit
 支持心理健康
 提升心情
 让他们终身受益
-Regular physical activity from childhood has significant long-term health benefits. It helps **build a strong foundation for** **physical fitness**, improving heart health, **muscle strength**, and **bone density**. Kids who stay active **are less likely to develop chronic conditions** like **obesity**, **diabetes**, or **heart disease** later in life. Additionally, regular exercise **promotes healthy habits** and a positive attitude towards fitness, which can lead to a more active lifestyle as adults. It also **supports mental health** by reducing stress and **boosting mood**. By establishing these habits early, children are more likely to **maintain them throughout their lives**, contributing to overall well-being and a healthier future.
+Regular physical activity from childhood has significant long-term health benefits. It helps **build a strong foundation for** **physical fitness**, improving heart health, **muscle strength**, and **bone density**. Kids who stay active **are less likely to develop chronic conditions** like **obesity/oʊˈbiː.sə.t̬i/**, **diabetes/ˌdaɪ.əˈbiː.t̬iːz/**, or **heart disease** later in life. Additionally, regular exercise **promotes healthy habits** and a positive attitude towards fitness, which can lead to a more active lifestyle as adults. It also **supports mental health** by reducing stress and **boosting mood**. By establishing these habits early, children are more likely to **maintain them throughout their lives**, contributing to overall well-being and a healthier future.
 
 16.What are the benefits and drawbacks of working from home compared to working in an office?
 有几个好处
