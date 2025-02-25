@@ -74,7 +74,7 @@ def split_audio(audio_file, timestamps, output_folder="audio_clips"):
     audio_files = []
 
     for i, (start, end) in enumerate(timestamps):
-        output_file = f"{output_folder}/sentence_{i+1}.mp3"
+        output_file = f"{output_folder}/{audio_file}_{i+1}.mp3"
         command = f'ffmpeg -i "{audio_file}" -ss {start} -to {end} -q:a 0 -map a "{output_file}" -y'
         subprocess.run(command, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         audio_files.append(output_file)
