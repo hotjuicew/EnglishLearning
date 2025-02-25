@@ -2,10 +2,9 @@ import whisper
 import subprocess
 import pandas as pd
 import os
-import re
 from difflib import SequenceMatcher
 
-# ===================== 1. 读取完整听力文本（提取英文和中文） =====================
+# ===================== 1. 读取完整听力文本 =====================
 def load_full_text(text_file):
     print("📄 读取完整听力文本...")
     english_sentences = []
@@ -31,9 +30,10 @@ def transcribe_audio(audio_file, english_sentences):
         audio_file,
         word_timestamps=True,
         language="en",
-        initial_prompt="\n".join(english_sentences),  # 让 Whisper 参考完整英文文本
+        initial_prompt=" ".join(english_sentences),
         temperature=0.0,
-        compression_ratio_threshold=3.0
+        compression_ratio_threshold=3.5,
+        logprob_threshold=-1.0
     )
 
     whisper_sentences = [seg["text"] for seg in result["segments"]]
@@ -42,8 +42,11 @@ def transcribe_audio(audio_file, english_sentences):
     # 确保 Whisper 识别出的文本和 `full_text.txt` 进行对齐
     aligned_sentences = align_sentences(whisper_sentences, english_sentences)
 
+    # **强制保证时间戳和文本数量一致**
+    timestamps = timestamps[:len(aligned_sentences)]
+
     print(f"✅ 获取时间戳完成，共 {len(timestamps)} 段")
-    return timestamps[:len(aligned_sentences)], aligned_sentences
+    return timestamps, aligned_sentences
 
 # ===================== 3. 匹配 Whisper 句子和 `full_text.txt` =====================
 def align_sentences(whisper_sentences, full_text_sentences):
@@ -53,7 +56,7 @@ def align_sentences(whisper_sentences, full_text_sentences):
         best_match = max(whisper_sentences, key=lambda x: SequenceMatcher(None, x, full_text).ratio())
         aligned_sentences.append(best_match)
 
-    return aligned_sentences
+    return aligned_sentences[:len(full_text_sentences)]  # 确保数量匹配
 
 # ===================== 4. 使用 FFmpeg 裁剪音频 =====================
 def split_audio(audio_file, timestamps, output_folder="audio_clips"):
@@ -62,7 +65,7 @@ def split_audio(audio_file, timestamps, output_folder="audio_clips"):
     audio_files = []
 
     for i, (start, end) in enumerate(timestamps):
-        output_file = f"{output_folder}/{audio_file}_{i+1}.mp3"
+        output_file = f"{output_folder}/sentence_{i+1}.mp3"
         command = f'ffmpeg -i "{audio_file}" -ss {start} -to {end} -q:a 0 -map a "{output_file}" -y'
         subprocess.run(command, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         audio_files.append(output_file)
@@ -89,7 +92,7 @@ def create_anki_csv(english_sentences, chinese_sentences, audio_files, output_cs
 
 # ===================== 6. 主程序执行 =====================
 def main():
-    audio_file = "托福100真题3C1.mp3"
+    audio_file = "托福100真题3L2.mp3"
     text_file = "full_text.txt"
     output_folder = "audio_clips"
 
