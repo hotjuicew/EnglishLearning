@@ -1,73 +1,71 @@
-from faster_whisper import WhisperModel
+import whisper
 import subprocess
 import pandas as pd
 import os
 from difflib import SequenceMatcher
 
 # ===================== 1. 读取完整听力文本 =====================
-def load_full_text(text_file):
+def load_text(english_file, chinese_file):
     print("📄 读取完整听力文本...")
-    english_sentences = []
-    chinese_sentences = []
+    
+    with open(english_file, "r", encoding="utf-8") as f:
+        english_text = f.read().replace("\n", " ")  # **不再按换行分句，整合成一个长文本**
 
-    with open(text_file, "r", encoding="utf-8") as f:
-        lines = [line.strip() for line in f.readlines() if line.strip()]
+    with open(chinese_file, "r", encoding="utf-8") as f:
+        chinese_text = f.read().replace("\n", " ")  # **整合成一个长文本**
 
-    for i in range(0, len(lines), 2):  # 每两行是一组（英文 + 中文）
-        if i + 1 < len(lines):
-            english_sentences.append(lines[i])
-            chinese_sentences.append(lines[i + 1])
+    print(f"✅ 加载完成：英文 {len(english_text)} 字符，中文 {len(chinese_text)} 字符")
+    return english_text, chinese_text
 
-    print(f"✅ 加载完成：英文 {len(english_sentences)} 句，中文 {len(chinese_sentences)} 句")
-    return english_sentences, chinese_sentences
-
-# ===================== 2. 运行 Whisper 获取逐词时间戳 =====================
+# ===================== 2. 运行 Whisper 识别音频（优化参数） =====================
 def transcribe_audio(audio_file):
-    print("🔍 运行 Faster-Whisper 识别完整音频（获取每个单词的时间戳）...")
-    model = WhisperModel("medium", compute_type="int8")
+    print("🔍 运行 Whisper 识别完整音频（优化分句，让每句话尽量长）...")
+    model = whisper.load_model("medium")
 
-    segments, _ = model.transcribe(audio_file, vad_filter=True)  # 使用语音活动检测
-    whisper_sentences = []
-    timestamps = []
+    result = model.transcribe(
+        audio_file,
+        word_timestamps=True,  
+        language="en",
+        temperature=0.0,
+        best_of=5,  # 选择最好的结果，避免短句
+        compression_ratio_threshold=3.5,  # 防止过度断句
+        no_speech_threshold=0.3,  # 允许一定的无声时间，减少不必要的拆分
+        logprob_threshold=-1.0  # 降低门槛，确保完整句子
+    )
 
-    for segment in segments:
-        whisper_sentences.append(segment.text.strip())
-        timestamps.append((segment.start, segment.end))
+    whisper_sentences = [seg["text"] for seg in result["segments"]]
+    timestamps = [(seg["start"], seg["end"]) for seg in result["segments"]]
 
-    print(f"✅ Whisper 识别完成，生成 {len(whisper_sentences)} 个片段")
+    print(f"✅ Whisper 识别完成，生成 {len(whisper_sentences)} 句")
     return whisper_sentences, timestamps
 
-# ===================== 3. 用 `full_text.txt` 对齐 Whisper 识别的时间戳 =====================
-def align_sentences(whisper_sentences, whisper_timestamps, full_text_sentences, whisper_results):
-    print("🔄 正在匹配 `full_text.txt` 句子...")
-    aligned_timestamps = []
+# ===================== 3. 匹配 Whisper 结果和 `english.txt` `chinese.txt` =====================
+def match_texts(whisper_sentences, english_text, chinese_text):
+    print("🔄 正在匹配 `whisper_sentences` 句子...")
 
-    for i, full_text in enumerate(full_text_sentences):
+    matched_english = []
+    matched_chinese = []
+
+    for whisper_sentence in whisper_sentences:
+        # 找到 `english_text` 里最匹配的片段
         best_match_index = max(
-            range(len(whisper_sentences)),
-            key=lambda j: SequenceMatcher(None, whisper_sentences[j], full_text).ratio()
+            range(len(english_text) - len(whisper_sentence)),
+            key=lambda i: SequenceMatcher(None, english_text[i:i+len(whisper_sentence)], whisper_sentence).ratio()
         )
+        best_match_english = english_text[best_match_index:best_match_index+len(whisper_sentence)]
 
-        # 计算该句子的单词时间戳
-        words = whisper_results["segments"][best_match_index]["words"]
-        if words:
-            start_time = words[0]["start"]
-            end_time = words[-1]["end"]
-        else:
-            start_time, end_time = whisper_timestamps[best_match_index]
+        # **找到对应的中文翻译**
+        best_match_chinese_index = max(
+            range(len(chinese_text) - len(best_match_english)),
+            key=lambda i: SequenceMatcher(None, chinese_text[i:i+len(best_match_english)], best_match_english).ratio()
+        )
+        best_match_chinese = chinese_text[best_match_chinese_index:best_match_chinese_index+len(best_match_english)]
 
-        # 进行平滑处理，避免时间戳出现在上一句或下一句
-        if i > 0:
-            prev_end = aligned_timestamps[i - 1][1]
-            start_time = max(start_time, prev_end + 0.1)  # 避免时间重叠
-        if i < len(full_text_sentences) - 1:
-            next_start = whisper_timestamps[min(best_match_index + 1, len(whisper_timestamps) - 1)][0]
-            end_time = min(end_time, next_start - 0.1)
+        matched_english.append(best_match_english)
+        matched_chinese.append(best_match_chinese)
 
-        aligned_timestamps.append((start_time, end_time))
-
-    print(f"✅ 对齐完成，所有 `full_text.txt` 句子已匹配对应时间戳")
-    return aligned_timestamps
+    print(f"✅ 匹配完成，所有 `whisper_sentences` 均找到对应文本")
+    return matched_english, matched_chinese
 
 # ===================== 4. 使用 FFmpeg 裁剪音频 =====================
 def split_audio(audio_file, timestamps, output_folder="audio_clips"):
@@ -86,12 +84,12 @@ def split_audio(audio_file, timestamps, output_folder="audio_clips"):
     return audio_files
 
 # ===================== 5. 生成 Anki CSV 文件 =====================
-def create_anki_csv(english_sentences, chinese_sentences, audio_files, output_csv="anki_listening_deck.csv"):
+def create_anki_csv(whisper_sentences, matched_english, matched_chinese, audio_files, output_csv="anki_listening_deck.csv"):
     print("📄  生成 Anki CSV 文件...")
     
     data = [
-        ("[sound:" + os.path.basename(audio) + "]", english + "<br><br>" + chinese)
-        for english, chinese, audio in zip(english_sentences, chinese_sentences, audio_files)
+        ("[sound:" + os.path.basename(audio) + "]", whisper_text + "<br><br>" + english_text + "<br><br>" + chinese_text)
+        for whisper_text, english_text, chinese_text, audio in zip(whisper_sentences, matched_english, matched_chinese, audio_files)
     ]
 
     df = pd.DataFrame(data, columns=["Front", "Back"])
@@ -102,24 +100,25 @@ def create_anki_csv(english_sentences, chinese_sentences, audio_files, output_cs
 
 # ===================== 6. 主程序执行 =====================
 def main():
-    audio_file = "托福100真题3L2.mp3"
-    text_file = "full_text.txt"
+    audio_file = "托福真题35Passage2.mp3"  # 你的托福听力音频
+    english_file = "english.txt"  # 你的完整英文文本
+    chinese_file = "chinese.txt"  # 你的完整中文文本
     output_folder = "audio_clips"
 
-    # 读取完整文本
-    english_sentences, chinese_sentences = load_full_text(text_file)
+    # 读取完整文本（不按换行拆分）
+    english_text, chinese_text = load_text(english_file, chinese_file)
 
     # 运行 Whisper，获取完整音频 + 逐词时间戳
-    whisper_sentences, whisper_timestamps, whisper_results = transcribe_audio(audio_file)
+    whisper_sentences, timestamps = transcribe_audio(audio_file)
 
-    # 让 `whisper_timestamps` 对齐 `full_text.txt`
-    aligned_timestamps = align_sentences(whisper_sentences, whisper_timestamps, english_sentences, whisper_results)
+    # 让 `whisper_sentences` 对齐 `english.txt` 和 `chinese.txt`
+    matched_english, matched_chinese = match_texts(whisper_sentences, english_text, chinese_text)
 
     # 裁剪音频
-    audio_files = split_audio(audio_file, aligned_timestamps, output_folder)
+    audio_files = split_audio(audio_file, timestamps, output_folder)
 
     # 生成 Anki CSV
-    csv_file = create_anki_csv(english_sentences, chinese_sentences, audio_files)
+    csv_file = create_anki_csv(whisper_sentences, matched_english, matched_chinese, audio_files)
 
     print("\n🚀 **所有任务完成！请将以下文件导入 Anki：**")
     print(f"📂 {csv_file} （卡片数据）")
