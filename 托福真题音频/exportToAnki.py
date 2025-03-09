@@ -33,7 +33,7 @@ def import_csv_to_anki():
     for line in lines:
         front, back = line.strip().split(",", 1)
         notes.append({
-            "deckName": "托福真题听力句子::托福真题36",
+            "deckName": "托福真题听力句子::托福真题37",
             "modelName": "问答题",
             "fields": {"正面": front, "背面": back},
             "tags": ["AutoImported"],

@@ -2,8 +2,9 @@ import whisper
 import subprocess
 import pandas as pd
 import os
+import sys
 from difflib import SequenceMatcher
-from googletrans import Translator  # 自动翻译
+from deep_translator import GoogleTranslator
 
 # ===================== 1. 读取 `english.txt` =====================
 def load_english_text(english_file):
@@ -87,17 +88,18 @@ def match_text_with_whisper(whisper_sentences, english_text):
 
 # ===================== 5. 自动翻译英文到中文 =====================
 def translate_to_chinese(english_sentences):
-    print("🌍 自动翻译 `english.txt` 句子到中文...")
-    translator = Translator()
+    print("🌍 使用 `deep_translator` 翻译 `english.txt` 句子到中文...")
     chinese_sentences = []
+    translator = GoogleTranslator(source="en", target="zh-CN")
 
     for sentence in english_sentences:
-        translation = translator.translate(sentence, src="en", dest="zh-cn").text
+        translation = translator.translate(sentence)
         chinese_sentences.append(translation)
         print(f"🔹 {sentence} → {translation}")
 
     print(f"✅ 翻译完成，共 {len(chinese_sentences)} 句")
     return chinese_sentences
+
 
 # ===================== 6. 使用 FFmpeg 裁剪音频 =====================
 def split_audio(audio_file, timestamps, output_folder="audio_clips"):
@@ -129,10 +131,21 @@ def create_anki_csv(matched_english, chinese_sentences, audio_files, output_csv=
 
     print(f"✅ Anki CSV 文件已生成：{output_csv}")
     return output_csv
+def notify_completion():
+    # 播放声音
+    if sys.platform == "win32":
+        import winsound
+        winsound.Beep(1000, 500)
+        os.system('msg * "🎉 任务完成！请查看 Anki！"')
+    elif sys.platform == "darwin":
+        os.system("osascript -e 'beep'")
+    else:
+        os.system("echo -e '\a'")
+
 
 # ===================== 8. 主程序执行 =====================
 def main():
-    audio_file = "托福真题36Passage1.mp3"  
+    audio_file = "托福真题37Passage5.mp3"  
     english_file = "english.txt"  
     output_folder = "audio_clips"
 
@@ -165,6 +178,8 @@ def main():
 
     # 生成 Anki CSV
     csv_file = create_anki_csv(matched_english, chinese_sentences, audio_files)
+
+    notify_completion()
 
 if __name__ == "__main__":
     main()
