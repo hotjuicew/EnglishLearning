@@ -3,8 +3,10 @@ import subprocess
 import pandas as pd
 import os
 import sys
+import time
 from difflib import SequenceMatcher
-from deep_translator import GoogleTranslator
+import asyncio
+from pyppeteer import launch
 
 # ===================== 1. 读取 `english.txt` =====================
 def load_english_text(english_file):
@@ -87,18 +89,51 @@ def match_text_with_whisper(whisper_sentences, english_text):
     return matched_english
 
 # ===================== 5. 自动翻译英文到中文 =====================
+async def translate_with_google_web(text, source_lang="en", target_lang="zh-CN", max_retries=5, wait_time=2):
+    """使用 Pyppeteer 控制 Google 翻译网页，并加入重试机制"""
+    retries = 0
+    while retries < max_retries:
+        try:
+            browser = await launch(
+                headless=True,
+                args=["--no-sandbox"],
+                executablePath="D:\Self\chrlauncher-win64-stable-codecs-sync\chrlauncher.exe" # 替换为你的 Chromium 安装路径
+            )
+            page = await browser.newPage()
+
+            # 访问 Google 翻译网页
+            url = f"https://translate.google.com/?sl={source_lang}&tl={target_lang}&text={text}&op=translate"
+            await page.goto(url)
+            await asyncio.sleep(3)  # 等待翻译加载
+
+            # 获取翻译结果
+            result_element = await page.querySelector('span[jsname="W297wb"]')
+            translation = await page.evaluate('(element) => element.textContent', result_element)
+
+            await browser.close()
+            return translation
+
+        except Exception as e:
+            retries += 1
+            print(f"⚠️ 翻译失败（{retries}/{max_retries}），错误：{e}，等待 {wait_time} 秒后重试...")
+            time.sleep(wait_time)
+
+    print(f"❌ 最终失败：{text}，使用 '翻译失败' 作为替代")
+    return "翻译失败"
+
 def translate_to_chinese(english_sentences):
-    print("🌍 使用 `deep_translator` 翻译 `english.txt` 句子到中文...")
+    """使用 Pyppeteer 自动化 Google 翻译（支持重试）"""
+    print("🌍 使用 `pyppeteer` 翻译 `english.txt` 句子到中文...")
     chinese_sentences = []
-    translator = GoogleTranslator(source="en", target="zh-CN")
 
     for sentence in english_sentences:
-        translation = translator.translate(sentence)
+        translation = asyncio.run(translate_with_google_web(sentence, "en", "zh-CN"))
         chinese_sentences.append(translation)
         print(f"🔹 {sentence} → {translation}")
 
     print(f"✅ 翻译完成，共 {len(chinese_sentences)} 句")
     return chinese_sentences
+
 
 
 # ===================== 6. 使用 FFmpeg 裁剪音频 =====================
@@ -145,7 +180,7 @@ def notify_completion():
 
 # ===================== 8. 主程序执行 =====================
 def main():
-    audio_file = "托福真题37Passage5.mp3"  
+    audio_file = "托福真题35Passage2.mp3"  
     english_file = "english.txt"  
     output_folder = "audio_clips"
 
