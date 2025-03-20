@@ -5,8 +5,13 @@ import os
 import sys
 import time
 from difflib import SequenceMatcher
-import asyncio
-from pyppeteer import launch
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from webdriver_manager.chrome import ChromeDriverManager
 
 # ===================== 1. 读取 `english.txt` =====================
 def load_english_text(english_file):
@@ -88,29 +93,63 @@ def match_text_with_whisper(whisper_sentences, english_text):
     print(f"✅ 匹配完成，共 {len(matched_english)} 句")
     return matched_english
 
-# ===================== 5. 自动翻译英文到中文 =====================
-async def translate_with_google_web(text, source_lang="en", target_lang="zh-CN", max_retries=5, wait_time=2):
-    """使用 Pyppeteer 控制 Google 翻译网页，并加入重试机制"""
+# ===================== 5. 自动翻译英文到中文（百度翻译） =====================
+def translate_with_baidu(text, max_retries=5, wait_time=3):
+    """使用 Selenium 自动化百度翻译，并支持重试"""
+    
+    options = Options()
+    options.add_argument("--headless")  # 无头模式
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
+    options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36")  # 伪装成人类访问
+
+    service = Service(ChromeDriverManager().install())
+    driver = webdriver.Chrome(service=service, options=options)
+
     retries = 0
     while retries < max_retries:
         try:
-            browser = await launch(
-                headless=True,
-                args=["--no-sandbox"],
-                executablePath="D:\Self\chrlauncher-win64-stable-codecs-sync\chrlauncher.exe" # 替换为你的 Chromium 安装路径
+            # 1️⃣ 打开百度翻译
+            driver.get("https://fanyi.baidu.com/mtpe-individual/multimodal#/")
+            time.sleep(5)
+
+            # 2️⃣ 检测并关闭广告
+            try:
+                ad_close_button = WebDriverWait(driver, 3).until(
+                    EC.element_to_be_clickable((By.XPATH, '//div[contains(@class, "ad-close")]'))
+                )
+                ad_close_button.click()
+                print("✅ 关闭广告成功")
+                time.sleep(2)
+            except:
+                pass
+
+            # 3️⃣ 等待输入框加载
+            input_box = WebDriverWait(driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, '//div[@data-slate-node="element"]'))
             )
-            page = await browser.newPage()
 
-            # 访问 Google 翻译网页
-            url = f"https://translate.google.com/?sl={source_lang}&tl={target_lang}&text={text}&op=translate"
-            await page.goto(url)
-            await asyncio.sleep(3)  # 等待翻译加载
+            # 4️⃣ 确保输入框可见并可交互
+            driver.execute_script("arguments[0].scrollIntoView();", input_box)
+            driver.execute_script("arguments[0].click();", input_box)
 
-            # 获取翻译结果
-            result_element = await page.querySelector('span[jsname="W297wb"]')
-            translation = await page.evaluate('(element) => element.textContent', result_element)
+            # 5️⃣ 输入待翻译文本
+            input_box.send_keys(text)
+            time.sleep(3)  # 等待翻译完成
 
-            await browser.close()
+            # 6️⃣ 获取翻译结果（自动重试）
+            translation = ""
+            for _ in range(5):
+                try:
+                    # **改进 XPath**：选择 `id="trans-selection"` 下的第一个 `<span>`
+                    output_element = driver.find_element(By.XPATH, '//div[@id="trans-selection"]//span[1]')
+                    translation = output_element.text
+                    if translation:
+                        break  # 成功获取翻译后退出循环
+                except:
+                    time.sleep(2)  # 继续等待翻译结果
+
+            driver.quit()
             return translation
 
         except Exception as e:
@@ -122,19 +161,17 @@ async def translate_with_google_web(text, source_lang="en", target_lang="zh-CN",
     return "翻译失败"
 
 def translate_to_chinese(english_sentences):
-    """使用 Pyppeteer 自动化 Google 翻译（支持重试）"""
-    print("🌍 使用 `pyppeteer` 翻译 `english.txt` 句子到中文...")
+    """使用 Selenium 自动化百度翻译（支持重试）"""
+    print("🌍 使用 `selenium` 翻译 `english.txt` 句子到中文...")
     chinese_sentences = []
 
     for sentence in english_sentences:
-        translation = asyncio.run(translate_with_google_web(sentence, "en", "zh-CN"))
+        translation = translate_with_baidu(sentence)
         chinese_sentences.append(translation)
         print(f"🔹 {sentence} → {translation}")
 
     print(f"✅ 翻译完成，共 {len(chinese_sentences)} 句")
     return chinese_sentences
-
-
 
 # ===================== 6. 使用 FFmpeg 裁剪音频 =====================
 def split_audio(audio_file, timestamps, output_folder="audio_clips"):
@@ -180,7 +217,7 @@ def notify_completion():
 
 # ===================== 8. 主程序执行 =====================
 def main():
-    audio_file = "托福真题35Passage2.mp3"  
+    audio_file = "托福真题35Passage4.mp3"  
     english_file = "english.txt"  
     output_folder = "audio_clips"
 
